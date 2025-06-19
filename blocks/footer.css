@@ -1,0 +1,16 @@
+.footer {
+  text-align: center;
+  margin: 0;
+  background-color: #fcf5e5;
+}
+
+.footer__text {
+  color: #212121b2;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  margin: 4.24% auto;
+}
