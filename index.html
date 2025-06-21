@@ -10,112 +10,111 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
-  <body style="margin: 0; overflow-x: hidden">
+  <body class="body">
     <div class="page">
-      <div class="menu_bar">
-        <img class="menu_bar__logo" alt="Spots Logo" src="./images/Logo.svg" />
-      </div>
       <header class="header">
-        <div class="profile">
+        <img class="header__logo" alt="Spots Logo" src="./images/Logo.svg" />
+      </header>
+      <main class="content">
+        <section class="profile">
           <img
             class="profile__avatar"
             alt="Bessie Coleman"
             src="./images/avatar.jpg"
           />
-          <div class="profile__right">
-            <div class="profile__text">
-              <h1 class="profile__name">Bessie Coleman</h1>
-              <p class="profile__description">Civil Aviator</p>
-            </div>
-            <button class="profile__button">
+          <div class="profile__column">
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
+            <button class="profile__edit-btn" type="button">
               <img
-                class="edit_icon"
-                alt="edit icon"
+                class="profile__edit-btn-icon"
+                alt="Edit Profile"
                 src="./images/Group 2.svg"
-              />Edit Profile
+              />
+              Edit Profile
             </button>
           </div>
-        </div>
-        <button class="header__button">
-          <img
-            class="header__button_logo"
-            alt="+"
-            src="./images/Group 26.svg"
-          />
-          New Post
-        </button>
-      </header>
-      <main class="content">
-        <ul class="content__cards">
-          <li class="card">
+          <button class="profile__new-post-btn" type="button">
             <img
-              class="card__image"
-              alt=""
-              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+              class="header__button_logo"
+              alt="+"
+              src="./images/Group 26.svg"
             />
-            <div class="card__bottom">
-              <p class="card__caption">Val Thorens</p>
-              <button class="card__like"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              class="card__image"
-              alt=""
-              src="./images/2-photo-by-ceiline-from-pexels.jpg"
-            />
-            <div class="card__bottom">
-              <p class="card__caption">Restaurant terrace</p>
-              <button class="card__like"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              class="card__image"
-              alt=""
-              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-            />
-            <div class="card__bottom">
-              <p class="card__caption">An outdoor cafe</p>
-              <button class="card__like"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              class="card__image"
-              alt=""
-              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-            />
-            <div class="card__bottom">
-              <p class="card__caption">
-                A very long bridge, over the forest...
-              </p>
-              <button class="card__like"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              class="card__image"
-              alt=""
-              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-            />
-            <div class="card__bottom">
-              <p class="card__caption">Tunnel with morning light</p>
-              <button class="card__like"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              class="card__image"
-              alt=""
-              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-            />
-            <div class="card__bottom">
-              <p class="card__caption">Mountain house</p>
-              <button class="card__like"></button>
-            </div>
-          </li>
-        </ul>
+            New Post
+          </button>
+        </section>
+        <section class="cards">
+          <ul class="cards__list">
+            <li class="card">
+              <img
+                class="card__image"
+                alt=""
+                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+              />
+              <div class="card__bottom">
+                <p class="card__caption">Val Thorens</p>
+                <button class="card__like"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                alt=""
+                src="./images/2-photo-by-ceiline-from-pexels.jpg"
+              />
+              <div class="card__bottom">
+                <p class="card__caption">Restaurant terrace</p>
+                <button class="card__like"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                alt=""
+                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+              />
+              <div class="card__bottom">
+                <p class="card__caption">An outdoor cafe</p>
+                <button class="card__like"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                alt=""
+                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+              />
+              <div class="card__bottom">
+                <p class="card__caption">
+                  A very long bridge, over the forest...
+                </p>
+                <button class="card__like"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                alt=""
+                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+              />
+              <div class="card__bottom">
+                <p class="card__caption">Tunnel with morning light</p>
+                <button class="card__like"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                alt=""
+                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+              />
+              <div class="card__bottom">
+                <p class="card__caption">Mountain house</p>
+                <button class="card__like"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
       </main>
       <footer class="footer"><p class="footer__text">2023 © Spots</p></footer>
     </div>
