@@ -16,3 +16,7 @@
 ## Link to Page
 
 - https://zsg0016.github.io/se_project_spots
+
+## Link to Presentation
+
+- https://drive.google.com/file/d/1IilPNnbJdKL_FD10gfi2BQtDy8KGPkcf/view?usp=sharing
