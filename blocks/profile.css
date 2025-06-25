@@ -15,44 +15,53 @@
   height: 190px;
   border-radius: 8px;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 
 .profile__column {
   max-width: 420px;
-  gap: 12px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
 .profile__name {
-  font-family: "Poppins", serif, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 100%;
-  letter-spacing: 0%;
 
   margin: 0;
   margin-bottom: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 260px;
 }
 
 .profile__description {
-  font-family: "Poppins", serif, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
   color: #212121b2;
 
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 200px;
 }
 
 .profile__edit-btn {
-  font-family: "Poppins", serif, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
   color: #212121;
   opacity: 70%;
   background-color: transparent;
@@ -64,6 +73,10 @@
   cursor: pointer;
   padding: 0;
   margin-top: auto;
+}
+
+.profile__edit-btn:hover {
+  opacity: 100%;
 }
 
 .profile__new-post-btn {
@@ -81,26 +94,23 @@
   align-items: center;
   margin-bottom: 20px;
 
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
   color: #fcf5e5;
   text-align: center;
   cursor: pointer;
   margin-left: auto;
 }
 
-.profile__new-post-btn-logo {
-  width: 12px;
-  height: 12px;
+.profile__new-post-btn:hover {
+  background: #212121cc;
 }
 
-@media screen and (max-width: 300px) {
-  .profile__name {
-    font-size: 20px;
-  }
+.profile__new-post-logo {
+  width: 12px;
+  height: 12px;
 }
 
 @media screen and (max-width: 630px) {
@@ -130,11 +140,5 @@
 
   .profile__new-post-btn {
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 630px) and (max-width: 880px) {
-  .profile__new-post-btn {
-    margin-left: 0;
   }
 }
