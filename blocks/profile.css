@@ -127,10 +127,13 @@
   }
 
   .profile__avatar {
+    width: 80px;
+    height: 80px;
     margin: 0;
   }
 
   .profile__name {
+    font-size: 20px;
     margin: 0;
   }
 
