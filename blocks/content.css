@@ -5,6 +5,7 @@
 
 @media screen and (max-width: 630px) {
   .content {
+    margin-top: 20px;
     width: 88%;
   }
 }

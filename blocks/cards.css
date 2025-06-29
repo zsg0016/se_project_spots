@@ -4,7 +4,6 @@
   border-color: #21212166;
   margin: 0 auto;
   display: flex;
-  width: 88%;
   height: max-content;
   margin: 0 auto;
   display: flex;
@@ -17,7 +16,6 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: 413px 413px 413px;
-  grid-template-rows: 445px 445px;
   column-gap: 20px;
   row-gap: 40px;
   margin: 0;
@@ -27,8 +25,6 @@
 
 @media screen and (max-width: 630px) {
   .cards {
-    width: 90%;
-    height: 68.5%;
     margin: 0 auto;
     justify-content: center;
   }
@@ -40,5 +36,6 @@
     grid-template-rows: repeat(6, 15%);
     justify-items: center;
     margin-bottom: 20px;
+    row-gap: 20px;
   }
 }
