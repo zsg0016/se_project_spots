@@ -1,6 +1,5 @@
 .profile {
   background-color: #fcf5e5;
-  width: 100%;
   gap: 20px;
   display: flex;
   flex-direction: row;
@@ -115,8 +114,6 @@
 
 @media screen and (max-width: 630px) {
   .profile {
-    width: 100%;
-    height: max-content;
     flex-direction: column;
     align-items: center;
   }
