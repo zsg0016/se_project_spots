@@ -1,7 +1,7 @@
 .modal {
+  visibility: hidden;
   width: 100vw;
   height: 100vh;
-  visibility: hidden;
   z-index: 1;
   position: fixed;
   display: grid;
