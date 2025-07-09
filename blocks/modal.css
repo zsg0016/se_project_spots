@@ -1,0 +1,19 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  z-index: 1;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.model__container {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+}

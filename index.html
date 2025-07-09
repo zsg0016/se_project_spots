@@ -12,6 +12,68 @@
   </head>
   <body>
     <div class="page">
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <form class="form">
+            <div class="form__header">
+              <h2 class="form__title">Edit Profile</h2>
+              <button class="form__close-btn" type="button"></button>
+            </div>
+            <fieldset class="form__area">
+              <label class="form__label" for="name"
+                >Name
+                <input
+                  type="text"
+                  placeholder="Type your name"
+                  class="form__input"
+                  id="name"
+              /></label>
+              <label class="form__label" for="description"
+                >Description
+                <input
+                  type="text"
+                  placeholder="Describe yourself"
+                  class="form__input"
+                  id="description"
+              /></label>
+            </fieldset>
+            <fieldset class="form__area">
+              <button type="submit" class="form__submit-btn">Save</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__container">
+          <form class="form">
+            <div class="form__header">
+              <h2 class="form__title">New Post</h2>
+              <button class="form__close-btn" type="button"></button>
+            </div>
+            <fieldset class="form__area">
+              <label class="form__label" for="link"
+                >Image link
+                <input
+                  type="url"
+                  placeholder="Paste a link to the picture"
+                  class="form__input"
+                  id="link"
+              /></label>
+              <label class="form__label" for="caption"
+                >Caption
+                <input
+                  type="text"
+                  placeholder="Type your caption"
+                  class="form__input"
+                  id="caption"
+              /></label>
+            </fieldset>
+            <fieldset class="form__area">
+              <button type="submit" class="form__submit-btn">Save</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
       <header class="header">
         <img class="header__logo" alt="Spots Logo" src="./images/Logo.svg" />
       </header>
