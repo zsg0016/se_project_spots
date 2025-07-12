@@ -10,7 +10,6 @@
 
 .form__header {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 32px;
 }
 
@@ -33,6 +32,7 @@
   background-position: center;
   border: none;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .form__close-btn:hover {
@@ -104,7 +104,7 @@
 
 @media screen and (max-width: 320px) {
   .form {
-    width: 276px;
+    max-width: max-content;
     padding-left: 12px;
     padding-right: 12px;
     padding-bottom: 12px;
@@ -126,12 +126,18 @@
   }
 
   .form__input {
-    max-width: 260px;
+    max-width: 200px;
     font-size: 16px;
     padding-left: 12px;
   }
 
   .form__submit-btn {
     width: 276px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .form__input {
+    max-width: 260px;
   }
 }

@@ -16,4 +16,5 @@
 .model__container {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 8px;
+  max-width: max-content;
 }
