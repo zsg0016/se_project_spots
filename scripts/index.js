@@ -20,7 +20,6 @@ newPostBtn.addEventListener("click", function () {
 
 newPostCloseBtn.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
-  newPostForm.reset();
 });
 
 const profileModal = document.querySelector(".profile");
@@ -35,8 +34,8 @@ editProfileDescription.value = profileDescription.textContent;
 //form submission handler
 function handleProfileFormSubmit(event) {
   event.preventDefault();
-  let newProfileName = editProfileName.value;
-  let newProfileDescription = editProfileDescription.value;
+  const newProfileName = editProfileName.value;
+  const newProfileDescription = editProfileDescription.value;
   profileName.textContent = newProfileName;
   profileDescription.textContent = newProfileDescription;
 

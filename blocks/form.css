@@ -25,7 +25,7 @@
 .form__close-btn {
   height: 40px;
   width: 40px;
-  background-image: url(../images/close-icon.png);
+  background-image: url(../images/close-icon.svg);
   opacity: 40%;
   background-size: cover;
   background-color: transparent;
