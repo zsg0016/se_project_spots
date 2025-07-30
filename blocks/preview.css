@@ -1,0 +1,55 @@
+.preview {
+  display: flex;
+}
+
+.preview__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.preview__image {
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.preview__close-btn {
+  height: 40px;
+  width: 40px;
+  background-image: url(../images/preview-close-icon.svg);
+  opacity: 100%;
+  background-size: cover;
+  background-color: transparent;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.preview__close-btn:hover {
+  opacity: 40%;
+}
+
+.preview__caption {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  margin: 0;
+  padding: 4px 4px 8px 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: max-content;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(33, 33, 33, 1);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .preview {
+    flex-direction: column-reverse;
+  }
+
+  .preview__close-btn {
+    margin-left: auto;
+  }
+}

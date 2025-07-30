@@ -74,6 +74,17 @@
           </form>
         </div>
       </div>
+      <div class="modal" id="preview-post-modal">
+        <div class="modal__container">
+          <div class="preview">
+            <div class="preview__content">
+              <img class="preview__image" src="" alt="" />
+              <h2 class="preview__caption"></h2>
+            </div>
+            <button type="button" class="preview__close-btn"></button>
+          </div>
+        </div>
+      </div>
       <header class="header">
         <img class="header__logo" alt="Spots Logo" src="./images/Logo.svg" />
       </header>
@@ -107,74 +118,22 @@
         </section>
         <section class="cards">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                class="card__image"
-                alt="Val Thorens"
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-              />
-              <div class="card__bottom">
-                <h2 class="card__caption">Val Thorens</h2>
-                <button class="card__like" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="Restaurant terrace"
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-              />
-              <div class="card__bottom">
-                <h2 class="card__caption">Restaurant terrace</h2>
-                <button class="card__like" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="An outdoor cafe"
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-              />
-              <div class="card__bottom">
-                <h2 class="card__caption">An outdoor cafe</h2>
-                <button class="card__like" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="A very long bridge, over the forest..."
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-              />
-              <div class="card__bottom">
-                <h2 class="card__caption">
-                  A very long bridge, over the forest...
-                </h2>
-                <button class="card__like" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="Tunnel with morning light"
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-              />
-              <div class="card__bottom">
-                <h2 class="card__caption">Tunnel with morning light</h2>
-                <button class="card__like" type="button"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                alt="Mountain house"
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-              />
-              <div class="card__bottom">
-                <h2 class="card__caption">Mountain house</h2>
-                <button class="card__like" type="button"></button>
-              </div>
-            </li>
+            <template id="card-template">
+              <li class="card">
+                <img class="card__image" />
+                <button type="button" class="card__delete-btn">
+                  <img
+                    class="card__delete-btn-image"
+                    alt="delete"
+                    src="../images/delete.svg"
+                  />
+                </button>
+                <div class="card__bottom">
+                  <h2 class="card__caption"></h2>
+                  <button class="card__like" type="button"></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
