@@ -58,7 +58,6 @@ function getCardElement(data) {
   cardImage.setAttribute("src", data.link);
   cardImage.setAttribute("alt", data.name);
   const cardLikeBtn = cardElement.querySelector(".card__like");
-  cardLikeBtn.setAttribute("style", "cursor: pointer");
 
   cardImage.addEventListener("click", function (evt) {
     previewPostImage.setAttribute("src", data.link);
@@ -69,7 +68,6 @@ function getCardElement(data) {
 
   cardLikeBtn.addEventListener("click", function (evt) {
     evt.target.classList.toggle("card__like-clicked");
-    evt.target.classList.toggle("card__like");
   });
 
   const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
