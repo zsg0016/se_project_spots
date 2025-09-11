@@ -50,7 +50,7 @@
 .form__label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin-top: 32px;
 
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
@@ -82,9 +82,19 @@
   cursor: pointer;
 }
 
+.form__input-error {
+  color: red;
+  visibility: hidden;
+}
+
+.form__error_visible {
+  visibility: visible;
+}
+
 .form__submit-btn {
   height: 52px;
   width: 156px;
+  margin-top: 32px;
   border-radius: 8px;
   background-color: #212;
   border: none;
@@ -100,6 +110,12 @@
 
 .form__submit-btn:hover {
   background: #212121cc;
+}
+
+.form__submit-btn_disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 320px) {

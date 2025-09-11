@@ -27,7 +27,13 @@
                   placeholder="Type your name"
                   class="form__input"
                   id="name"
+                  minlength="2"
+                  maxlength="40"
+                  required
               /></label>
+              <span class="form__input-error name-error"
+                >Please fill out this field.</span
+              >
               <label class="form__label" for="description"
                 >Description
                 <input
@@ -35,7 +41,13 @@
                   placeholder="Describe yourself"
                   class="form__input"
                   id="description"
+                  minlength="2"
+                  maxlength="200"
+                  required
               /></label>
+              <span class="form__input-error description-error"
+                >Please fill out this field.</span
+              >
             </fieldset>
             <fieldset class="form__area">
               <button type="submit" class="form__submit-btn">Save</button>
@@ -58,7 +70,11 @@
                   placeholder="Paste a link to the picture"
                   class="form__input"
                   id="link"
+                  required
               /></label>
+              <span class="form__input-error link-error"
+                >Please enter a URL.</span
+              >
               <label class="form__label" for="caption"
                 >Caption
                 <input
@@ -66,7 +82,13 @@
                   placeholder="Type your caption"
                   class="form__input"
                   id="caption"
+                  minlength="2"
+                  maxlength="30"
+                  required
               /></label>
+              <span class="form__input-error caption-error"
+                >Please fill out this field.</span
+              >
             </fieldset>
             <fieldset class="form__area">
               <button type="submit" class="form__submit-btn">Save</button>
@@ -138,5 +160,6 @@
       <footer class="footer"><p class="footer__text">2023 © Spots</p></footer>
     </div>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>
