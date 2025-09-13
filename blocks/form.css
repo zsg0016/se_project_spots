@@ -55,7 +55,7 @@
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 110.00000000000001%;
+  line-height: 110%;
   color: rgba(33, 33, 33, 0.7);
 }
 
@@ -82,9 +82,13 @@
   cursor: pointer;
 }
 
-.form__input-error {
+.form__error-message {
   color: red;
   visibility: hidden;
+}
+
+.form__input-error {
+  border-color: red;
 }
 
 .form__error_visible {

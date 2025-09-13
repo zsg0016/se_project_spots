@@ -24,9 +24,12 @@ const toggleButtonState = (inputList, submitBtn, config) => {
 const checkInputValidity = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   if (!inputElement.validity.valid) {
+    errorElement.textContent = inputElement.validationMessage;
     errorElement.classList.add(config.errorClass);
+    inputElement.classList.add(config.inputErrorClass);
   } else {
     errorElement.classList.remove(config.errorClass);
+    inputElement.classList.remove(config.inputErrorClass);
   }
 };
 

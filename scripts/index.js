@@ -78,7 +78,6 @@ function getCardElement(data) {
 }
 
 function handleKeyPress(event) {
-  console.log(event.key);
   if (event.key === "Escape") {
     const modalElement = document.querySelector(".modal_is-opened");
     closeModal(modalElement);
