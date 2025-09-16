@@ -7,6 +7,21 @@ const config = {
   errorClass: "form__error_visible",
 };
 
+const resetValidation = (formElement) => {
+  const inputErrorList = Array.from(
+    formElement.querySelectorAll(".form__error-message")
+  );
+  inputErrorList.forEach((errorElement) => {
+    errorElement.textContent = "";
+    errorElement.classList.remove(config.errorClass);
+  });
+
+  const inputList = Array.from(formElement.querySelectorAll(".form__input"));
+  inputList.forEach((inputElement) => {
+    inputElement.classList.remove(config.inputErrorClass);
+  });
+};
+
 const hasInvalidInput = (inputList) => {
   return inputList.some((inputElement) => {
     return !inputElement.validity.valid;
@@ -16,8 +31,10 @@ const hasInvalidInput = (inputList) => {
 const toggleButtonState = (inputList, submitBtn, config) => {
   if (hasInvalidInput(inputList)) {
     submitBtn.classList.add(config.inactiveButtonClass);
+    submitBtn.disabled = true;
   } else {
     submitBtn.classList.remove(config.inactiveButtonClass);
+    submitBtn.disabled = false;
   }
 };
 
@@ -39,6 +56,7 @@ const setEventListeners = (formElement, config) => {
   const inputList = Array.from(
     formElement.querySelectorAll(config.inputSelector)
   );
+  toggleButtonState(inputList, submitBtn, config);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement, config);

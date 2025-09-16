@@ -84,21 +84,27 @@ function handleKeyPress(event) {
   }
 }
 
+function disableButton(buttonElement, config) {
+  buttonElement.classList.add(config.inactiveButtonClass);
+  buttonElement.disabled = true;
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
   document.addEventListener("keydown", handleKeyPress);
 }
 
 function closeModal(modal) {
-  if (modal.id !== "preview-post-modal") {
-    const submitBtn = modal.querySelector(".form__submit-btn");
-    submitBtn.classList.add("form__submit-btn_disabled");
-  }
   document.removeEventListener("keydown", handleKeyPress);
   modal.classList.remove("modal_is-opened");
 }
 
 editProfileBtn.addEventListener("click", function () {
+  const nameField = editProfileForm.querySelector("#name");
+  nameField.value = profileCurrentName;
+  const descriptionField = editProfileForm.querySelector("#description");
+  descriptionField.value = profileCurrentDescription;
+  resetValidation(editProfileForm);
   openModal(editProfileModal);
 });
 
@@ -117,8 +123,10 @@ newPostCloseBtn.addEventListener("click", function () {
 const profileModal = document.querySelector(".profile");
 const profileName = profileModal.querySelector(".profile__name");
 const profileDescription = profileModal.querySelector(".profile__description");
+const profileCurrentName = profileName.textContent;
+const profileCurrentDescription = profileDescription.textContent;
 
-const editProfileForm = editProfileModal.querySelector(".form");
+const editProfileForm = document.forms["edit-profile-form"];
 const editProfileName = editProfileForm.querySelector("#name");
 const editProfileDescription = editProfileForm.querySelector("#description");
 editProfileName.value = profileName.textContent;
@@ -130,7 +138,10 @@ function handleProfileFormSubmit(event) {
   const newProfileDescription = editProfileDescription.value;
   profileName.textContent = newProfileName;
   profileDescription.textContent = newProfileDescription;
+
   closeModal(editProfileModal);
+  const submitBtn = modal.querySelector(".form__submit-btn");
+  disableButton(submitBtn, config);
 }
 //event listner for edit profile form
 editProfileForm.addEventListener("submit", handleProfileFormSubmit);
@@ -147,8 +158,11 @@ function handleAddCardSubmit(event) {
   });
   const newCard = getCardElement(initialCards[initialCards.length - 1]);
   cardList.prepend(newCard);
+
   closeModal(newPostModal);
   event.target.reset();
+  const submitBtn = modal.querySelector(".form__submit-btn");
+  disableButton(submitBtn, config);
 }
 //event listener for new post form
 newPostForm.addEventListener("submit", handleAddCardSubmit);
